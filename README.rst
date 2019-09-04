@@ -1,7 +1,6 @@
 bloom-python-driver
 =========
 
-This repo forked from https://github.com/kiip/bloom-python-driver/.
 This repo is compatiable with Python 3.
 
 Pybloom provides a Python client library to interface with
