@@ -347,7 +347,7 @@ class BloomdFilter(object):
             return resp == "Yes"
         raise BloomdError("Got response: %s" % resp)
 
-    def bulk_add(self, keys):
+    def bulk(self, keys):
         "Performs a bulk set command, adds multiple keys in the filter"
         command = ("b %s " % self.name) + " ".join([self._get_key(k) for k in keys])
         resp = self.conn.send_and_receive(command)
@@ -385,7 +385,7 @@ class BloomdFilter(object):
             return resp == "Yes"
         raise BloomdError("Got response: %s" % resp)
 
-    def multi_check(self, keys):
+    def multi(self, keys):
         "Performs a multi command, checks for multiple keys in the filter"
         command = ("m %s " % self.name) + " ".join([self._get_key(k) for k in keys])
         resp = self.conn.send_and_receive(command)
